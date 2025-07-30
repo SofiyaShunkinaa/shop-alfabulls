@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddArchivedToPromosDogsCategories extends Migration
+{
+    public function up(): void
+    {
+        Schema::table('promos', function (Blueprint $table) {
+            $table->boolean('archived')->default(false)->after('id');
+        });
+
+        Schema::table('dogs', function (Blueprint $table) {
+            $table->boolean('archived')->default(false)->after('id');
+        });
+
+        Schema::table('categories', function (Blueprint $table) {
+            $table->boolean('archived')->default(false)->after('id');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('promos', function (Blueprint $table) {
+            $table->dropColumn('archived');
+        });
+
+        Schema::table('dogs', function (Blueprint $table) {
+            $table->dropColumn('archived');
+        });
+
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropColumn('archived');
+        });
+    }
+}

@@ -1,0 +1,29 @@
+.orders-status {
+    padding: 10px;
+    border-radius: 9px;
+    color: #695B4B;
+}
+
+.orders-new {
+background-color: #00C8FF;
+}
+
+.orders-delivered {
+ background-color: #FFC170;
+}
+
+.orders-completed {
+background-color: #39FF1F;
+}
+
+.orders-paid {
+    background-color: #00FFD0;
+
+}
+
+.orders-processed {
+background-color: #00A1FF;
+}
+
+
+
